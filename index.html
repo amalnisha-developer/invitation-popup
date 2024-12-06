@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Dream Wedding Invitation</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #fff5e6;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .main-container {
+      text-align: center;
+    }
+
+    .button {
+      background-color: #f39c12;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 20px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:hover {
+      background-color: #d35400;
+    }
+
+    .invitation-popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 10px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      animation: fadeIn 0.5s;
+      text-align: center;
+    }
+
+    .invitation-popup h1 {
+      font-size: 36px;
+      color: #f39c12;
+    }
+
+    .invitation-popup p {
+      font-size: 18px;
+      color: #333;
+      margin: 10px 0;
+    }
+
+    .invitation-popup .bride-groom {
+      font-size: 24px;
+      font-weight: bold;
+      color: #e74c3c;
+    }
+
+    .invitation-popup .hearts {
+      color: #f1c40f;
+      font-size: 24px;
+      margin: 10px 0;
+    }
+
+    .invitation-popup .love-note {
+      font-style: italic;
+      color: #d35400;
+    }
+
+    .invitation-popup .close-btn {
+      background-color: #e74c3c;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      border-radius: 20px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .invitation-popup .close-btn:hover {
+      background-color: #c0392b;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+      }
+
+      to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main-container">
+    <button class="button" onclick="showInvitation()">Our Dream Wedding 💛</button>
+  </div>
+
+  <div class="invitation-popup" id="invitationPopup">
+    <h1>Our Forever Starts Here 💛</h1>
+    <p>The Wedding of</p>
+    <p class="bride-groom">Balaji & Amal Nisha</p>
+    <p class="hearts">💛💛💛</p>
+    <p class="love-note">"One day, no matter the struggles, we will survive together and make this dream come true, My Partner. 💛"</p>
+    <p>📅 Date: <strong>10<sup>th </sup> October 2026</strong></p>
+    <p>📍 Venue: <strong>In Our Hearts and Reality</strong></p>
+    <button class="close-btn" onclick="closeInvitation()">Close 💛</button>
+  </div>
+
+  <script>
+    // Show the invitation popup
+    function showInvitation() {
+      document.getElementById('invitationPopup').style.display = 'block';
+    }
+
+    // Close the invitation popup
+    function closeInvitation() {
+      document.getElementById('invitationPopup').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
